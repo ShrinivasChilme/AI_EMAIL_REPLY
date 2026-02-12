@@ -1,0 +1,11 @@
+/* Content script styles */
+
+#ai-reply-btn:hover {
+    background-color: #45a049 !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-1px);
+}
+
+#ai-reply-btn:active {
+    transform: translateY(0);
+}

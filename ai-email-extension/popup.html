@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Email Reply Generator</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Email Reply Generator</h1>
+        
+        <div class="form-group">
+            <label for="emailContent">Email Content:</label>
+            <textarea id="emailContent" placeholder="Paste the email content here..." rows="6"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="tone">Tone (Optional):</label>
+            <select id="tone">
+                <option value="">Professional</option>
+                <option value="friendly">Friendly</option>
+                <option value="formal">Formal</option>
+                <option value="casual">Casual</option>
+            </select>
+        </div>
+
+        <button id="generateBtn" class="btn-primary">Generate Reply</button>
+        
+        <div id="loading" style="display:none;" class="loading">
+            <div class="spinner"></div>
+            <p>Generating reply...</p>
+        </div>
+
+        <div id="result" style="display:none;" class="result">
+            <h3>Generated Reply:</h3>
+            <div id="resultText" class="result-text"></div>
+            <div class="button-group">
+                <button id="copyBtn" class="btn-secondary">Copy to Clipboard</button>
+                <button id="insertBtn" class="btn-secondary">Insert in Gmail</button>
+            </div>
+        </div>
+
+        <div id="error" style="display:none;" class="error">
+            <p id="errorText"></p>
+        </div>
+
+        <div id="apiStatus" class="api-status">
+            <p>Backend Status: <span id="statusIndicator">Checking...</span></p>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
